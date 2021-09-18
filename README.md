@@ -1,6 +1,6 @@
 # ESOFT6S-AEP
 
-</h3>Desenvolvido por:</h3>
+<h4>Desenvolvido por:</h4>
 <h4>
 <li>eduardooguedes</li>
 <li>IagoCO</li>
