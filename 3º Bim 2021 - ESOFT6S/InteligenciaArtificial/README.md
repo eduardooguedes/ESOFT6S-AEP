@@ -1,4 +1,4 @@
 # Ontologia - Smart Herd
 
-<h4>Ontologia do projeto Smart Herd desenvolvida no Protegè, baseando-se nas classes e hierarquias estabelecidas nos casos de uso.</h4>
+<h4>Arquivo .OWL da ontologia desenvolvida no Protegè para o projeto Smart Herd, baseando-se nas classes e hierarquias estabelecidas nos casos de uso.</h4>
 
