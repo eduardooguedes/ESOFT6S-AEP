@@ -1,9 +1,9 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView} from 'react-native';
 import ItemNotificacao from '../../components/ItemNotificacao';
 
 
-export default function Notificacoes(){
+export default function Notificacoes({navigation}){
 
   const notificacoes = [
     {
@@ -46,15 +46,16 @@ export default function Notificacoes(){
     }
   ];
 
-  return (
+  return ( 
     <ScrollView>
       <View style={styles.container}>
         <Text style={styles.titulo}>NOTIFICACOES</Text>
         {notificacoes.map(notificacao =>
-          <ItemNotificacao barracao={notificacao.barracao}
-                            lote={notificacao.lote}
-                            itens={notificacao.itens}/>
-        )};
+            <ItemNotificacao  barracao={notificacao.barracao}
+                              lote={notificacao.lote}
+                              itens={notificacao.itens}
+                              navigation = {navigation}/>
+        )}
       </View>
     </ScrollView>
   );

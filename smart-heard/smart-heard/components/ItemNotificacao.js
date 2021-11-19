@@ -1,21 +1,29 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 export default function ItemNotificacao(props){  
 
+  const [itemAnimal, setItemAnimal] = React.useState();
+
+  const irParaNotificacao = (mensagem) => { 
+    props.navigation.navigate("Notificacao", {msg: mensagem});
+  }
+
   return (
     <View style={styles.barracao}>
-        <View style={styles.tituloBarracao}>
+        <View style={styles.tituloBarracao}> 
           <Text style={styles.tituloBarracaoPorLote}>{props.barracao}</Text>
-          <Text> -> </Text>
+          <Text> - </Text>
           <Text style={styles.tituloLote}>{props.lote}</Text>
         </View>
 
         {props.itens.map(item => 
-          <View style={styles.itemDeNotificacao}>
-            <Text>{item.mensagem}</Text>
-            <Text style={{fontWeight: 'bold'}}>({item.animal})</Text>
-          </View>  
+          <TouchableOpacity onPress={() => irParaNotificacao(item.mensagem)}>
+            <View style={styles.itemDeNotificacao}>
+              <Text>{item.mensagem}</Text>
+              <Text style={{fontWeight: 'bold'}}>({item.animal})</Text>
+            </View>  
+          </TouchableOpacity>
         )}
     </View>
   );
