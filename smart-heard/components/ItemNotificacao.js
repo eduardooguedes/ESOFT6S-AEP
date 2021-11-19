@@ -3,6 +3,8 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 export default function ItemNotificacao(props){  
 
+  const [itemAnimal, setItemAnimal] = React.useState();
+
   const irParaNotificacao = (mensagem) => { 
     props.navigation.navigate("Notificacao", {msg: mensagem});
   }
